@@ -1,13 +1,16 @@
 import express from "express";
+import * as dotenv from 'dotenv' 
 import { get_posts } from "./markdown.js";
 
+dotenv.config();
+const posts = get_posts();
+
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 
 app.set("view engine", "ejs");
 app.use('/static',express.static('static'));
 
-const posts = get_posts();
 
 app.get("/", (req, res) => {
   const index_posts = posts.map(post => {
