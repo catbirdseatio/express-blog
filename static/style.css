@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Roboto:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+code {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    background: lightgray;
+    color: darkslategrey;
+    padding: .25rem;
+    margin: 2rem;
+}
