@@ -15,7 +15,7 @@ const filenames = fg.sync(base_path + "/posts/**/*.md");
 const readFile = (filename) => {
   const rawFile = fs.readFileSync(filename, "utf-8");
   const parsed = matter(rawFile);
-  const html = marked(parsed.content);
+  const html = marked(parsed.content, marked_options);
 
   return { ...parsed.data, content: html };
 };

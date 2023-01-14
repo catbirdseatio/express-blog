@@ -1,5 +1,5 @@
 ---
-title: Fist Post
+title: First Post
 slug: first-post
 author: Roderick Mvnch
 ---
