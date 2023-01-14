@@ -1,0 +1,23 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name  172.104.18.54
+                 www.catbirdseat.io
+                 catbirdseat.io;
+
+    root /home/leigh/www/catbirdseat.io/dist;
+    index index.html;
+
+    location / {
+     
+    }
+    
+    location /blog {
+        proxy_pass http://127.0.01:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
