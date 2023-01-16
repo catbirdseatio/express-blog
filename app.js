@@ -9,7 +9,7 @@ const port = process.env.PORT;
 
 app.set("view engine", "ejs");
 app.use('/static',express.static('static'));
-app.use('/', posts);
+app.use('/blog', posts);
 
 
 app.listen(port, () => {
