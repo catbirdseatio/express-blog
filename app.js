@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT;
 
 app.set("view engine", "ejs");
-app.use('/static',express.static('static'));
+app.use('/blog/static',express.static('static'));
 app.use('/blog', posts);
 
 
